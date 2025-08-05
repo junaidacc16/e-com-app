@@ -2,6 +2,7 @@ import { Button } from "@/components/ui/button";
 import Image from "next/image";
 import Link from "next/link";
 import { Product } from "./types";
+import ProductCard from "@/components/ProductCard";
 
 async function getFeaturedProducts(): Promise<Product[]> {
   try {
@@ -55,6 +56,33 @@ export default async function HomePage() {
             <p className="text-gray-500 text-lg">No featured products available</p>
           </div>
         )}
+      </section>
+      {/* Features Section */}
+      <section className="py-16 mt-16">
+        <h2 className="text-3xl font-bold text-center mb-12">Why Choose E-Store?</h2>
+        <div className="grid grid-cols-1 md:grid-cols-3 gap-8">
+          <div className="text-center">
+            <div className="bg-blue-100 w-16 h-16 rounded-full flex items-center justify-center mx-auto mb-4">
+              <span className="text-2xl">🚚</span>
+            </div>
+            <h3 className="text-xl font-semibold mb-2">Free Shipping</h3>
+            <p className="text-gray-600">Free shipping on all orders over $50</p>
+          </div>
+          <div className="text-center">
+            <div className="bg-green-100 w-16 h-16 rounded-full flex items-center justify-center mx-auto mb-4">
+              <span className="text-2xl">🔒</span>
+            </div>
+            <h3 className="text-xl font-semibold mb-2">Secure Payment</h3>
+            <p className="text-gray-600">Your payment information is safe with us</p>
+          </div>
+          <div className="text-center">
+            <div className="bg-purple-100 w-16 h-16 rounded-full flex items-center justify-center mx-auto mb-4">
+              <span className="text-2xl">↩️</span>
+            </div>
+            <h3 className="text-xl font-semibold mb-2">Easy Returns</h3>
+            <p className="text-gray-600">30-day return policy on all items</p>
+          </div>
+        </div>
       </section>
     </div>
   );
